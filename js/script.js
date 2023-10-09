@@ -25,3 +25,35 @@ for (let i = 0; i < validEmail.length; i++) {
     }
 }
   // console.log(messageDomElement);
+
+
+
+
+const dadi = [1,2,3,4,5,6]
+
+
+
+let buttonDOMElement = document.getElementById('clicca')
+
+let risultatoDOMElement = document.getElementById('risultato')
+
+buttonDOMElement = addEventListener('click', function (event){
+
+    let num1 = Math.floor(Math.random()*6);
+
+    let num2 = Math.floor(Math.random()*6);
+    console.log(num1,num2)
+
+    if(num1 > num2){
+        let win = ('hai vinto')
+        risultatoDOMElement.innerHTML = win
+
+        }else{
+        let lose = ('hai perso')
+        risultatoDOMElement.innerHTML = lose
+    }
+    
+   
+})
+
+
