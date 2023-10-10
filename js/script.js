@@ -4,56 +4,59 @@ let email;
 email = prompt ('digita la tua email');
 console.log(email)
 // - dichiarare un array con le email registrate
-let validEmail = ['pasquale@gmail.com','andrea@gmail.com', 'pippo@pluto.com', 'michele@gmail.com','dario@gmail.com'];
+let validEmails = ['pasquale@gmail.com','andrea@gmail.com', 'pippo@pluto.com', 'michele@gmail.com','dario@gmail.com'];
 // - dichiarare che un email puo accedere solo se registrata all'interno dell'array
 //     - mandara un messaggio che dice se è stato ferificata l'email
 let messageDomElement = document.getElementById('email');
 let firstPartMessage = ('La tua email è:');
 let valid = ('valida');
 let notValid = ('non è valida');
-
 let actualEmail;
 
-for (let i = 0; i < validEmail.length; i++) {
+for (let i = 0; i < validEmails.length; i++) {
 
-    actualEmail = validEmail[i];
+    actualEmail = validEmails[i];
 
     if (actualEmail === email) {
         console.log('valida');
-        messageDomElement.innerHTML = firstPartMessage + valid
+        messageDomElement.innerHTML = firstPartMessage + valid;
 
+    }else {
+        messageDomElement.innerHTML = firstPartMessage + notValid;
     }
 }
-  // console.log(messageDomElement);
 
+const numbers = [1,2,3,4,5,6];
+let actualNumber;
 
+for (let i = 1; i < numbers.length; i++) {
 
+    actualNumber = numbers[i];
+    
+    console.log(i)
+}
 
-const dadi = [1,2,3,4,5,6]
+// let buttonDOMElement = document.getElementById('clicca')
 
+// let risultatoDOMElement = document.getElementById('risultato')
 
+// buttonDOMElement = addEventListener('click', function (event){
 
-let buttonDOMElement = document.getElementById('clicca')
+//     let num1 = Math.floor(Math.random()*6);
 
-let risultatoDOMElement = document.getElementById('risultato')
+//     let num2 = Math.floor(Math.random()*6);
+//     console.log(num1,num2)
 
-buttonDOMElement = addEventListener('click', function (event){
+//     if(num1 > num2){
+//         let win = ('hai vinto')
+//         risultatoDOMElement.innerHTML = win
 
-    let num1 = Math.floor(Math.random()*6);
-
-    let num2 = Math.floor(Math.random()*6);
-    console.log(num1,num2)
-
-    if(num1 > num2){
-        let win = ('hai vinto')
-        risultatoDOMElement.innerHTML = win
-
-        }else{
-        let lose = ('hai perso')
-        risultatoDOMElement.innerHTML = lose
-    }
+//         }else{
+//         let lose = ('hai perso')
+//         risultatoDOMElement.innerHTML = lose
+//     }
     
    
-})
+// })
 
 
